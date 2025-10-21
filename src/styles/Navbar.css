@@ -1,0 +1,132 @@
+/* Navbar.css */
+/* Sleek professional look with gradient background and subtle glass effect */
+
+.navbar {
+  width: 100%;
+  background: linear-gradient(90deg, #0f172a, #1e293b, #334155); /* 🔹 Modern blue-gray gradient */
+  color: #f9fafb; /* light text */
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px); /* Adds elegant glass blur */
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo a {
+  text-decoration: none;
+  color: #f9fafb;
+  font-size: 1.9rem;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.logo span {
+  color: #3b82f6; /* bright blue accent */
+}
+
+.logo a:hover {
+  color: #60a5fa; /* lighter blue */
+}
+
+/* Desktop Navigation */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2.2rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #e5e7eb;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.nav-links li a:hover {
+  background-color: rgba(59, 130, 246, 0.15); /* blue tint */
+  color: #3b82f6;
+  transform: translateY(-2px);
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #f3f4f6;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile Navbar */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: linear-gradient(180deg, #0f172a, #1e293b); /* dark blend */
+    flex-direction: column;
+    align-items: flex-start;
+    width: 75%;
+    max-width: 300px;
+    padding: 25px;
+    transform: translateX(100%);
+    transition: transform 0.35s ease;
+    box-shadow: -3px 0 12px rgba(0, 0, 0, 0.3);
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+  }
+
+  .nav-links.open {
+    transform: translateX(0);
+  }
+
+  .nav-links li {
+    width: 100%;
+    margin-bottom: 18px;
+  }
+
+  .nav-links li a {
+    display: block;
+    width: 100%;
+  }
+
+  /* Hamburger animation */
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+}
