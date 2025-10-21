@@ -11,9 +11,8 @@ export default function Skills() {
         </p>
 
         <div className="skills-grid">
-          {/* ===== Front-End Development ===== */}
           <div className="skills-category">
-            <h3>💻 Front-End Development</h3>
+            <h3>Front-End Development</h3>
             <div className="skill">
               <span>HTML5</span>
               <div className="bar"><div className="progress" style={{ width: "95%" }}></div></div>
@@ -31,10 +30,8 @@ export default function Skills() {
               <div className="bar"><div className="progress" style={{ width: "85%" }}></div></div>
             </div>
           </div>
-
-          {/* ===== Tools & Backend ===== */}
           <div className="skills-category">
-            <h3>⚙️ Tools & Backend</h3>
+            <h3>Tools & Backend</h3>
             <div className="skill">
               <span>Firebase</span>
               <div className="bar"><div className="progress" style={{ width: "75%" }}></div></div>
@@ -48,10 +45,8 @@ export default function Skills() {
               <div className="bar"><div className="progress" style={{ width: "85%" }}></div></div>
             </div>
           </div>
-
-          {/* ===== Soft Skills ===== */}
           <div className="skills-category">
-            <h3>🧠 Soft Skills</h3>
+            <h3>Soft Skills</h3>
             <div className="skill">
               <span>Communication</span>
               <div className="bar"><div className="progress" style={{ width: "92%" }}></div></div>

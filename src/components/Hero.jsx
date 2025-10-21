@@ -5,8 +5,6 @@ import myPhoto from "../assets/melody.jpg";
 function Hero() {
   const roles = ["Front-End Developer", "UI/UX Designer", "React Expert"];
   const [currentRole, setCurrentRole] = useState(roles[0]);
-
-  // 🔁 Typing Animation Effect
   useEffect(() => {
     let index = 0;
     const interval = setInterval(() => {
@@ -18,10 +16,8 @@ function Hero() {
 
   return (
     <>
-      {/* ===== HERO SECTION ===== */}
       <section className="hero" id="home">
         <div className="hero-content">
-          {/* Left Text */}
           <div className="hero-text">
             <h1>
               Hello, I'm <span>Melody Collins</span>
@@ -40,14 +36,14 @@ function Hero() {
 
             <div className="hero-buttons">
               <a href="#contact" className="btn primary-btn">
-                💌 Contact Me
+              Contact Me
               </a>
               <a
                 href="/Melody_Collins_CV.pdf"
                 download
                 className="btn secondary-btn"
               >
-                📄 Download CV
+                Download CV
               </a>
             </div>
 
@@ -81,8 +77,6 @@ function Hero() {
               </a>
             </div>
           </div>
-
-          {/* Right Image */}
           <div className="hero-image">
             <div className="image-glow">
               <img

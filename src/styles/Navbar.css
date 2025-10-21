@@ -1,16 +1,13 @@
-/* Navbar.css */
-/* Sleek professional look with gradient background and subtle glass effect */
-
 .navbar {
   width: 100%;
-  background: linear-gradient(90deg, #0f172a, #1e293b, #334155); /* 🔹 Modern blue-gray gradient */
-  color: #f9fafb; /* light text */
+  background: linear-gradient(90deg, #0f172a, #1e293b, #334155);
+  color: #f9fafb;
   padding: 15px 0;
   position: sticky;
   top: 0;
   z-index: 1000;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(10px); /* Adds elegant glass blur */
+  backdrop-filter: blur(10px);
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -23,7 +20,6 @@
   justify-content: space-between;
 }
 
-/* Logo */
 .logo a {
   text-decoration: none;
   color: #f9fafb;
@@ -33,18 +29,17 @@
 }
 
 .logo span {
-  color: #3b82f6; /* bright blue accent */
+  color: #3b82f6;
 }
 
 .logo a:hover {
-  color: #60a5fa; /* lighter blue */
+  color: #60a5fa;
 }
 
-/* Desktop Navigation */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 2.2rem;
+  gap: 2rem;
 }
 
 .nav-links li a {
@@ -59,12 +54,11 @@
 }
 
 .nav-links li a:hover {
-  background-color: rgba(59, 130, 246, 0.15); /* blue tint */
+  background-color: rgba(59, 130, 246, 0.15);
   color: #3b82f6;
   transform: translateY(-2px);
 }
 
-/* Hamburger Menu */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -80,7 +74,20 @@
   transition: all 0.3s ease;
 }
 
-/* Mobile Navbar */
+@media (max-width: 992px) {
+  .logo a {
+    font-size: 1.7rem;
+  }
+
+  .nav-links {
+    gap: 1.5rem;
+  }
+
+  .nav-links li a {
+    font-size: 0.95rem;
+  }
+}
+
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex;
@@ -90,7 +97,7 @@
     position: absolute;
     top: 70px;
     right: 0;
-    background: linear-gradient(180deg, #0f172a, #1e293b); /* dark blend */
+    background: linear-gradient(180deg, #0f172a, #1e293b);
     flex-direction: column;
     align-items: flex-start;
     width: 75%;
@@ -115,9 +122,10 @@
   .nav-links li a {
     display: block;
     width: 100%;
+    font-size: 1rem;
+    padding: 10px 0;
   }
 
-  /* Hamburger animation */
   .menu-toggle.active .bar:nth-child(1) {
     transform: rotate(45deg) translateY(8px);
   }
@@ -128,5 +136,42 @@
 
   .menu-toggle.active .bar:nth-child(3) {
     transform: rotate(-45deg) translateY(-8px);
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 12px 0;
+  }
+
+  .logo a {
+    font-size: 1.5rem;
+  }
+
+  .nav-links {
+    width: 80%;
+  }
+
+  .nav-links li a {
+    font-size: 0.95rem;
+  }
+
+  .menu-toggle .bar {
+    width: 22px;
+    height: 2.5px;
+  }
+}
+
+@media (max-width: 360px) {
+  .logo a {
+    font-size: 1.3rem;
+  }
+
+  .nav-links {
+    width: 85%;
+  }
+
+  .nav-links li a {
+    font-size: 0.9rem;
   }
 }

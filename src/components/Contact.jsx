@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <section className="contact" id="contact">
       <div className="contact-container">
-        <h2>Let’s Connect 🤝</h2>
+        <h2>Let’s Connect</h2>
         <p className="contact-intro">
           Whether you want to discuss a project, ask a question, or just say hi — 
           I’d love to hear from you! Let’s build something amazing together.
